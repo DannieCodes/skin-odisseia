@@ -1,0 +1,232 @@
+/************************** Global ****************************/
+
+html { margin: 0px!important; background: var(--grad-1); height: 100vh; width: 100vw; box-sizing: border-box; padding: 1vw!important; overflow:hidden; }
+
+body { background: var(--bg-5); padding: 0px!important; margin: 0px!important; font-family: var(--font-txt); font-size: var(--size-txt); color: var(--txt-light); border: 0.1vw solid var(--bg-6); border-radius: 2vw; overflow: hidden; height: 100%; }
+
+main { background: var(--bg-5); padding: 0px!important; margin: 0px!important; font-family: var(--font-txt); font-size: var(--size-txt); color: var(--txt-light); border: 0.1vw solid var(--bg-6); border-radius: 2vw; display: grid; grid-template-rows: 5vw; grid-template-columns: 5vw calc(100% - 5vw); height: 100vh; overflow: auto; }
+
+br { display: none; }
+
+*{ margin: 0px; position: relative; text-decoration: none; transition: 0.5s all;}
+a { color: var(--txt-light) }
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+main::-webkit-scrollbar{width:0;}
+
+span#top, span#bottom { display: none; }
+
+:root {
+  --bg-1: #272727;
+  --bg-2: #2b2b2b;
+  --bg-3: #232323;
+  --bg-4: #303030;
+  --bg-5: #333333;
+  --bg-6: #1F1F1F;
+  
+  --accent-1: 184 194 254 ;
+  --accent-2: 62 87 254;
+  --grad-1: linear-gradient(85deg, rgb(var(--accent-1)), rgb(var(--accent-2))) ;
+  
+  --txt-light: #999999;
+  --txt-dark: #111111;
+  --txt-light-2: #F1F1F1;
+  
+  --font-txt: open-sans;
+  --font-title: myriad-pro  ;
+  --font-banner: source-code-pro;
+  --font-sub: myriad-pro ;
+  
+  --size-txt: 1vw;
+  --size-title: 2vw ;
+  --size-sub: 0.7vw;
+  --size-icon: ;
+  --size-banner: 8vw ;
+  
+}
+
+/************************** Nav's ****************************/
+
+section#nav-1 { display: flex; align-items: center; justify-content: space-between; padding: 1vw 2vw; background: var(--bg-1); border-bottom: 0.1vw solid var(--bg-6); position: sticky; top: 0px; border-radius: 2vw 2vw 0vw 0vw; z-index: 999; grid-column-start: 1; grid-column-end: 3; }
+
+section#nav-1 div { display: flex; align-items: center; gap: 0.5vw; }
+
+section#nav-1 .left a { display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-weight: 700; font-size: 0.7vw; }
+
+section#nav-1 .left a:hover { color: rgb(var(--accent-1)) }
+
+section#nav-1 .right .notification { display: flex; align-items: center; justify-content: center; background: var(--bg-2); border: 0.1vw solid var(--bg-5); padding: 0.3vw; width: 1vw; height: 1vw; border-radius: 100%; position: absolute;bottom: 0vw; right: -1vw; z-index: 1; cursor: pointer; }
+
+section#nav-1 .right .saudation { flex-wrap: wrap; align-items: center; justify-content: flex-end; line-height: 0.8vw; padding-right: 1vw; }
+
+section#nav-1 .right .saudation text { display: block; flex: 100%; text-align: right; }
+
+section#nav-1 .right img { border-radius: 100%; object-fit: cover; width: 3vw; height: 3vw; }
+
+
+section#nav-2 { border-right: 0.1vw solid var(--bg-6); padding: 1vw; display: flex; flex-direction: column; align-items: center; justify-content: space-between; background: var(--bg-2); grid-row-start: 3; grid-row-end: 7; position: sticky; top: 5vw; border-radius: 0vw 0vw 0vw 2vw; height: calc(100vh - 9vw); }
+
+section#nav-2 div { display: flex; flex-direction: column; align-items: center; gap: 1vw; }
+
+section#nav-2 .left a { font-size: 0; }
+
+section#nav-2  a i { font-size: var(--size-icons); background: var(--bg-1); display: flex; align-items: center; justify-content: center; width: 1vw; height: 1vw; padding: 0.7vw; border-radius: 100%; border: 0.1vw solid var(--bg-5); font-size: 0.8vw }
+
+section#nav-2 .left a i:hover { color:rgb(var(--accent-1)); }
+
+/************************** header ****************************/
+
+section#header { grid-column-start: 1; grid-column-end: 3; height: calc(100vh - 7vw); display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 0.1vw solid var(--bg-6); }
+
+section#header:before { content: ""; display: block; background: rgb(var(--accent-2)) url(https://i.imgur.com/goz9NRj.gif)center/cover; background-blend-mode: multiply; position: absolute; width: 100%; height: 100%; opacity: 0.2; }
+
+section#header img { object-fit: cover; height: 170%; filter: invert(1); position: absolute; }
+
+section#header h1,
+section#header h2,
+section#header icon i{ opacity: 0; }
+
+s ection#header:hover h1 { opacity: 1; text-transform: uppercase; font-size: var(--size-banner); font-family: var(--font-banner); color: #f1f1f1; line-height: 1; }
+
+s ection#header:hover h2 { opacity: 1; color: #f1f1f1; font-size: var(--size-sub); font-family: var(--font-sub); text-transform: uppercase; font-weight: 100; letter-spacing: 0.45vw; line-height: 4; word-spacing: 0.1vw; left: 0.2vw; }
+
+s ection#header:hover icon i { opacity: 1; font-size: 3vw; color: #f1f1f1; border: 0.3vw solid #f1f1f1; border-radius: 100%; width: 5vw; height: 5vw; display: flex; align-items: center; justify-content: center; background: var(--bg-4); }
+
+s ection#header:hover img { opacity: 0; }
+
+/************************ Category **************************/
+
+section#main { padding: 4vw; display: flex; flex-wrap: wrap; gap: 1vw; }
+
+section#category header#category-title { border: 0.1vw solid var(--bg-6); margin: 1vw 0; padding: 2vw; background: var(--bg-2); text-transform: uppercase; color: rgb(var(--accent-1)); font-family: var(--font-banner); font-size: 1vw; font-weight: 400; letter-spacing: 0.5vw; }
+
+section#category section#foruns { display: grid; gap: 1vw; grid-template-columns: auto auto auto; }
+
+section#category section#foruns section.forum { border: 0.1vw solid var(--bg-6); text-align: justify; background: var(--bg-4); display: grid; align-items: flex-start; grid-template-rows: 4vw 5vw; }
+
+section#category section#foruns section.forum:not(section.Acervo section#foruns section.forum:first-of-type,
+section.Personagem section#foruns section.forum:last-of-type) .f-1 { padding: 2vw 2vw 0px; display: flex; flex-direction: column; }
+
+section#category section#foruns section.forum .f-1 a { text-transform: uppercase; font-family: var(--font-title); font-weight: 600; font-size: var(--size-title); color: var(--txt-light-2); }
+
+section#category section#foruns section.forum .f-1 span, section#category section#foruns section.forum .f-1 span a{ display: inline-flex; font-size: var(--size-sub)!important; color: rgb(var(--accent-1)); text-transform: uppercase; align-items: center; gap: 0.5vw; font-weight: 500; font-family: var(--font-txt); }
+
+section#category section#foruns section.forum:not(section.Acervo section#foruns section.forum:first-of-type,
+section.Personagem section#foruns section.forum:last-of-type) .f-2 { padding: 2vw; line-height: 1.7vw; }
+
+section#category section#foruns section.forum .f-2 img, section#category section#foruns section.forum .f-5 img { float: left; margin: 1vw 1vw 1vw 0vw; padding: 1vw; background: var(--bg-1); border: 0.1vw solid var(--bg-6); object-fit: cover; width: 4vw; height: 4vw; }
+
+section#category section#foruns section.forum:not(section.Acervo section#foruns section.forum:first-of-type,
+section.Personagem section#foruns section.forum:last-of-type) .f-3 { grid-row: 1; background: var(--bg-2); border-bottom: 0.1vw solid var(--bg-6); padding: 1vw; text-transform: uppercase; font-family: var(--font-sub); font-size: var(--size-sub); display: flex; align-items: center; justify-content: space-between; }
+
+section#category section#foruns section.forum:not(section.Acervo section#foruns section.forum:first-of-type,
+section.Personagem section#foruns section.forum:last-of-type) .f-3 .links { display: flex; flex-wrap: wrap; gap: 0.5vw; align-items: center; }
+
+section#category section#foruns section.forum:not(section.Acervo section#foruns section.forum:first-of-type,
+section.Personagem section#foruns section.forum:last-of-type) .f-3 .links:before { content: "\eb62"; font-family: 'cappuccicons'; font-size: 0.9vw; color: var(--txt-dark); padding: 0.2vw; border: 0.1vw solid var(--bg-2); background: rgb(var(--accent-1)); display: flex; align-items: center; justify-content: center; width: 1vw; height: 1vw; }
+
+section#category section#foruns section.forum .f-3 .f-4 { display: flex; flex-direction: column; align-items: flex-end; width: 8vw; }
+
+section#category section#foruns section.forum .f-3 .f-4 div strong { color: rgb(var(--accent-1)); }
+
+section.Acervo section#foruns section.forum:first-of-type,
+section.Personagem section#foruns section.forum:last-of-type{ grid-column: 1; grid-row-start: 1; grid-row-end: 3; width: 22vw; display: flex!important; flex-direction: column; gap: 3vw; padding: 2vw; }
+
+section.Acervo section#foruns section.forum:first-of-type .f-1 a:after { content: "Manual do iniciante"; text-transform: uppercase; font-family: var(--font-sub)!important; font-size: var(--size-sub); display: block; color: rgb(var(--accent-1)); font-weight: 100!important; line-height: 2vw; }
+
+section.Personagem section#foruns section.forum:last-of-type{ grid-column: 3!important; }
+
+section.Acervo section#foruns section.forum:first-of-type i.cp.cp-tree-o { background: var(--bg-1); display: flex; align-items: center; justify-content: center; width: 2vw; height: 2vw; padding: 0.7vw; border-radius: 100%; border: 0.1vw solid var(--bg-5); font-size: 1.5vw; position: absolute; right: 1vw; top: 1vw; color: rgb(var(--accent-1)); }
+
+section.Acervo section#foruns section.forum:first-of-type .f-1 a,
+section.Personagem section#foruns section.forum:last-of-type .f-1 a{ font-size: 4vw!important; line-height: 88%; }
+
+section.Acervo section#foruns section.forum:first-of-type .f-3 .links,
+section.Personagem section#foruns section.forum:last-of-type .f-3 .links{ display: flex; flex-wrap: wrap; gap: 0.4vw; }
+
+section.Personagem section#foruns section.forum:last-of-type .f-3 .links { align-items: center; justify-content: flex-end; }
+
+section.Acervo section#foruns section.forum:first-of-type .f-3 a,
+section.Personagem section#foruns section.forum:last-of-type .f-3 .links a{ display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-weight: 700; font-size: 0.7vw; color: var(--txt-dark); padding: 0.3vw 0.5vw; border: 0.1vw solid var(--bg-2); background: rgb(var(--accent-1)); }
+
+section.Personagem section#foruns section.forum:last-of-type .f-1 { display: flex; align-items: center; justify-content: flex-start; text-align: right; flex-direction: column; gap: 1vw; }
+
+section.Personagem section#foruns section.forum:nth-last-child(2) { grid-column-start: 1; grid-column-end: 3; }
+
+section.Personagem section#foruns section.forum:last-of-type .f-4 { text-transform: uppercase; font-family: var(--font-sub); font-size: var(--size-sub); display: flex; align-items: center; gap: 1vw; width: 100%; justify-content: flex-end; }
+
+section.Personagem section#foruns section.forum:last-of-type .f-4 strong,
+section.névoa section#foruns section.forum .f-3 .links span a{ color: rgb(var(--accent-1)); }
+
+section.Personagem section#foruns section.forum:last-of-type .f-5 { display: flex; width: 100%; align-items: center; justify-content: flex-end; right: -1.2vw; }
+
+section.névoa section#foruns,
+section.mortal section#foruns,
+section.Eventos section#foruns { display: flex!important; flex-wrap: wrap; }
+
+
+section.névoa section#foruns section.forum { flex: 34%; }
+
+section.névoa section.forum .f-2 { display: flex; gap: 1vw; flex-direction: column }
+
+section.névoa section.forum .f-2 img { width: 100%!important; padding: 0px!important; margin: 0px!important; float: none!important; height: 130%!important; position: absolute; top: -5.2vw; left: 0; border: 0px!important; filter: brightness(0.7) contrast(1.3) grayscale(1); mix-blend-mode: color-dodge; }
+
+section.névoa section.forum .f-1 { z-index: 2; }
+
+section.névoa section#foruns section.forum .f-3 .links span { color: rgb(var(--accent-1)); gap: 0.5vw; display: flex; align-items: center; }
+
+section.névoa section.forum .f-2 text { z-index: 2; color: var(--txt-light-2); }
+
+section.névoa section.forum .f-2 links { display: flex; flex-wrap: wrap; gap: 0.5vw; z-index: 2; align-items: center; height: fit-content; }
+
+section.névoa section.forum .f-2 links a { display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-weight: 700; font-size: 0.7vw; color: var(--txt-dark); padding: 0vw 0.5vw; border: 0.1vw solid var(--bg-2); background: rgb(var(--accent-1)); }
+
+section.mortal,
+section.Eventos { flex: 49%; }
+
+section.mortal section.forum,
+section.Eventos section.forum { flex: 100%; }
+
+/************************ Stats **************************/
+
+section#footer { padding: 0 4vw 4vw; display: flex; flex-wrap: wrap; gap: 1vw; }
+
+section#stat { border: 0.1vw solid var(--bg-6); background: var(--bg-4); display: flex; flex-wrap: wrap; }
+
+section#stat .grupos { display: flex; flex-wrap: wrap; gap: 1vw; flex: 100%; padding: 2vw; border-top: 0.1vw solid var(--bg-6); }
+
+section#stat .grupos a.gensmall { display: flex; align-items: center; justify-content: space-between; text-transform: uppercase; font-family: var(--font-banner); font-weight: 600; color: var(--txt-light-2); padding: 0.3vw 1vw; outline: 0.1vw solid var(--bg-6); border-left: 2vw solid var(--cor-grupo); background: var(--bg-2); font-size: 0.7vw; flex: 7%; text-align: right; }
+
+section#stat .grupos a.gensmall i { background: var(--bg-1); display: flex; align-items: center; justify-content: center; width: 2vw; height: 2vw; padding: 0.2vw; border-radius: 100%; border: 0.1vw solid var(--bg-5); font-size: 1.2vw; color: var(--cor-grupo); margin-left: -2vw; }
+
+section#stat .basic-infos { display: flex; flex: 100%; align-items: center; justify-content: space-between; background: var(--bg-2); padding: 1vw; border-bottom: 0.1vw solid var(--bg-6); }
+
+section#stat .basic-infos div { display: flex; align-items: center; gap: 1vw; }
+
+section#stat .basic-infos div img { object-fit: cover; border-radius: 100%; width: 3.5vw; height: 3.5vw; border: 0.1vw solid var(--bg-6); padding: 0.5vw; background: var(--bg-1); }
+
+section#stat .basic-infos div text { display: flex; flex-direction: column; text-transform: uppercase; font-weight: 600; font-size: var(--size-sub); color: rgb(var(--accent-1)); line-height: 1.5vw; }
+
+section#stat .basic-infos div text strong { font-size: var(--size-title); font-family: var(--font-banner); }
+
+section#stat .basic-infos div div { font-weight: 800; font-size: var(--size-sub); text-transform: uppercase; }
+
+section#stat .basic-infos div div strong { font-size: 3vw; font-family: var(--font-banner); color: rgb(var(--accent-1)); margin-right: -1vw; }
+
+section#stat .basic-infos .right { top: 1vw; }
+
+section#stat .basic-infos .right:before { content: "nosso universo conta com"; font-weight: 600; font-size: var(--size-sub); text-transform: uppercase; color: rgb(var(--accent-1)); position: absolute; top: -0.5vw; right: 0; }
+
+section#stat .online-now,
+section#stat .online-today{ padding: 1vw; border-right: 0.1vw solid var(--bg-6); background: var(--bg-2); flex: 30%; height: 12vw; display: flex; align-items: center; justify-content: center; }
+
+section#stat .online-now div { height: 100%; overflow: auto; width: 100%; font-size: var(--size-txt); font-family: var(--font-title); text-transform: uppercase; }
+
+section#stat .numbers-here { flex: 2; display: flex; align-items: center; flex-wrap: wrap; }
+
+section#stat .numbers-here span.base { display: none; }
+
+section#stat .numbers-here span { flex: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1.2vw 1vw; border-bottom: 0.1vw solid var(--bg-6); font-size: var(--size-sub); text-transform: uppercase; color: var(--txt-light-2); }
+section#stat .numbers-here span strong { color: rgb(var(--accent-1)); }
+section#stat .numbers-here span.invisiveis { border: 0px!important; }
